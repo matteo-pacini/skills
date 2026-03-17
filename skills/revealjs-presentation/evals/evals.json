@@ -1,0 +1,59 @@
+{
+  "skill_name": "revealjs-presentation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a Reveal.js presentation about the history of space exploration, 10 slides, dark theme",
+      "expected_output": "A cinematic dark-themed Reveal.js deck with timeline-style slides, fragment animations, speaker notes, and rich visual design across 10 slides",
+      "files": [],
+      "expectations": [
+        "File contains valid Reveal.js HTML structure (<!DOCTYPE html>, div.reveal, div.slides)",
+        "Reveal.js is loaded from a CDN (cdnjs, unpkg, or jsdelivr)",
+        "Uses a dark color scheme (dark background colors in CSS)",
+        "Contains at least 10 <section> slide elements",
+        "Uses fragment animations on at least 5 elements (class containing 'fragment')",
+        "Has speaker notes (<aside class=\"notes\">) on at least 5 slides",
+        "Loads Google Fonts via fonts.googleapis.com",
+        "Uses at least 2 different transition types (data-transition attributes or varied transitions)",
+        "Contains a <style> block with at least 30 lines of custom CSS",
+        "Initializes Reveal.js with RevealNotes plugin"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make me an HTML slide deck pitching a startup idea for an AI-powered recipe app called ChefMind. Include a problem slide, solution slide, market size, product demo mockup, team, and ask slide.",
+      "expected_output": "A polished pitch deck with stat callouts, clean professional layout, at least 6 slides covering problem/solution/market/demo/team/ask, and speaker notes",
+      "files": [],
+      "expectations": [
+        "File contains valid Reveal.js HTML structure (<!DOCTYPE html>, div.reveal, div.slides)",
+        "Reveal.js is loaded from a CDN (cdnjs, unpkg, or jsdelivr)",
+        "Contains slides addressing: problem, solution, market size, product/demo, team, and ask/CTA",
+        "Has at least one prominently styled stat or number callout (large font size for a metric)",
+        "Uses fragment animations on at least 5 elements (class containing 'fragment')",
+        "Has speaker notes (<aside class=\"notes\">) on at least 5 slides",
+        "Loads Google Fonts via fonts.googleapis.com",
+        "Defines a coherent color palette (CSS custom properties or consistent color scheme)",
+        "Contains a <style> block with at least 30 lines of custom CSS",
+        "'ChefMind' appears prominently on the title slide"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build a Reveal.js presentation teaching Python basics to beginners. Include code examples with syntax highlighting.",
+      "expected_output": "A tutorial-style deck with highlighted code blocks using the highlight plugin, step-by-step fragments, a friendly color scheme, and speaker notes",
+      "files": [],
+      "expectations": [
+        "File contains valid Reveal.js HTML structure (<!DOCTYPE html>, div.reveal, div.slides)",
+        "Reveal.js is loaded from a CDN (cdnjs, unpkg, or jsdelivr)",
+        "Contains at least 3 code blocks (<pre><code) with Python examples",
+        "Highlight plugin is loaded and code blocks use language-python or language-py class",
+        "At least one code block uses data-line-numbers for step-through highlighting",
+        "Uses fragment animations on at least 5 elements (class containing 'fragment')",
+        "Has speaker notes (<aside class=\"notes\">) on at least 5 slides",
+        "Loads Google Fonts via fonts.googleapis.com",
+        "Contains a <style> block with at least 30 lines of custom CSS",
+        "Covers fundamental Python topics (variables, functions, loops, or similar basics)"
+      ]
+    }
+  ]
+}
