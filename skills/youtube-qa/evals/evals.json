@@ -1,0 +1,46 @@
+{
+  "skill_name": "youtube-qa",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's a recap of The Handmaid's Tale: https://www.youtube.com/watch?v=jkfGdEanIX4 — What happened in the final season?",
+      "expected_output": "A focused answer about the final season events, drawn from the transcript, in the model's own words",
+      "files": [],
+      "assertions": [
+        {"text": "Response is based on actual transcript content, not general knowledge"},
+        {"text": "Response focuses specifically on the final season events"},
+        {"text": "Response does NOT include timestamps unless the user asked for them"},
+        {"text": "Response does NOT quote the transcript directly"},
+        {"text": "Response mentions specific plot points or character arcs from the final season"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Summarise this video using the Pareto Principle (focus on the 20% of content that delivers 80% of the value): https://www.youtube.com/watch?v=1o74a8a0rBw",
+      "expected_output": "A Pareto-style summary highlighting the most impactful points, no timestamps or quotes unless asked",
+      "files": [],
+      "assertions": [
+        {"text": "Response is based on actual transcript content, not general knowledge"},
+        {"text": "Response applies the Pareto Principle framing (80/20 or most important points)"},
+        {"text": "Response does NOT include timestamps unless the user asked for them"},
+        {"text": "Response does NOT quote the transcript directly"},
+        {"text": "Response does NOT include ad reads, sponsor segments, or promotional content"},
+        {"text": "Response covers the core actionable advice about AI-assisted codebase maintenance"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Summarise this video using the Pareto Principle (focus on the 20% of content that delivers 80% of the value): https://www.youtube.com/watch?v=zjQBE-Ij-5U",
+      "expected_output": "A Pareto-style summary highlighting the most impactful points, no timestamps or quotes unless asked",
+      "files": [],
+      "assertions": [
+        {"text": "Response is based on actual transcript content, not general knowledge"},
+        {"text": "Response applies the Pareto Principle framing (80/20 or most important points)"},
+        {"text": "Response does NOT include timestamps unless the user asked for them"},
+        {"text": "Response does NOT quote the transcript directly"},
+        {"text": "Response does NOT include ad reads, sponsor segments, or promotional content"},
+        {"text": "Response covers the key arguments or evidence presented in the video"}
+      ]
+    }
+  ]
+}

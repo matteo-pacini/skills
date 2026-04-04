@@ -17,6 +17,19 @@ Generate stunning, production-quality [Reveal.js](https://revealjs.com/) present
 - Fragment animations, speaker notes, syntax-highlighted code slides
 - Responsive 1920x1080 base resolution
 
+### youtube-qa
+
+Fetch YouTube video transcripts and answer questions about video content. Paste a YouTube URL and ask anything — get concise answers in the model's own words.
+
+**Triggers on:** YouTube URL, "video transcript", "what does this video say", "summarize this video"
+
+**Features:**
+- Single dependency: `youtube-transcript-api` (no API key needed)
+- Answers in own words — no quotes or timestamps unless you ask
+- Automatically skips ads, sponsor reads, and promotional segments
+- Multi-language support with translation
+- Handles auto-generated and manual captions
+
 ## Installation
 
 ```bash
