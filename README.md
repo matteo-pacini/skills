@@ -30,6 +30,20 @@ Fetch YouTube video transcripts and answer questions about video content. Paste 
 - Multi-language support with translation
 - Handles auto-generated and manual captions
 
+### gelato-balancing
+
+Balance authentic Italian gelato, fruit sorbetto, and dairy-free (vegan) frozen desserts at home using the professional formula — total solids, sugars, fat, milk solids (MSNF), stabilisers, and the PAC (anti-freezing) / POD (sweetness) sugar balance. Ask for any flavour — or just name a machine — and get a recipe with the full balancing math shown.
+
+**Triggers on:** "make pistachio gelato", "fior di latte recipe", "balance a lemon sorbet", "vegan chocolate gelato", "a recipe for my Ninja Creami", "my gelato is icy/rock-hard/too sweet, fix the recipe", "convert this ice cream recipe to gelato"
+
+**Features:**
+- Covers cream/milk gelato, fruit sorbetto, **and dairy-free vegan gelato**, with both a supermarket-simple and an advanced specialty-ingredient path
+- Bundled stdlib-Python calculator validates every metric (solids, sugars, fat, MSNF, lactose/sandiness, stabiliser, PAC/POD) against professional targets, scales to any batch size, and gives a plain-English texture read (also a `--json` mode)
+- Portable runner: uses `python3` if present, else pulls one via `nix-shell -p python3` on Nix systems — no install needed
+- Large built-in ingredient library (dairy, sugars, flavour pastes, plant milks, alcohol/salt, fruit Brix) plus common-name aliases, so recipes stay concise and the arithmetic is trustworthy
+- Machine-aware (batch freezer, **Ninja Creami**, Cuisinart, no-machine) with a defect troubleshooting guide and worked reference recipes
+- Research-backed references reconciled from named sources (Corvitto, Caviezel, Carpigiani, icecreamscience), honest about where the science genuinely disagrees
+
 ## MCP Servers
 
 ### protonmail

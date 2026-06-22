@@ -1,0 +1,96 @@
+{
+  "skill_name": "gelato-balancing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just got an ice cream machine and want to make proper fior di latte gelato at home — about 1kg. Can you give me a recipe and explain how it's balanced?",
+      "expected_output": "A balanced cream/white gelato recipe (~1000 g) with gram quantities, the composition/PAC/POD breakdown shown against the Italian targets, and a short method (age, churn, serve temperature). Total solids ~36-42%, sugars ~16-22%, fat ~6-9%, MSNF ~9-12%, stabiliser <=0.5%.",
+      "files": [],
+      "assertions": [
+        {"text": "Produces a concrete fior di latte / sweet white gelato recipe with gram quantities for a ~1 kg batch"},
+        {"text": "Total solids fall within (or are computed to be within) ~36-42% of the mix"},
+        {"text": "Total sugars fall within ~16-22% of the mix"},
+        {"text": "Fat falls within ~6-9% (up to ~12% acceptable only if explicitly a cream style)"},
+        {"text": "Milk solids non-fat (MSNF) fall within ~9-12% of the mix"},
+        {"text": "Stabiliser/emulsifier is <=0.5% of the mix, or texture is handled via egg yolk"},
+        {"text": "Shows the balancing math (per-component breakdown and PAC/POD or freezing behaviour), not just an ingredient list"},
+        {"text": "The reported composition percentages are arithmetically consistent with the ingredient quantities given"},
+        {"text": "Includes a method covering ageing/churning and a serving temperature around -12 to -14 C"},
+        {"text": "Does not invent false precision; where values are uncertain (e.g. exact PAC) it is appropriately hedged"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Balance me a lemon sorbet for my gelato machine. I have dextrose and stabiliser if needed.",
+      "expected_output": "A balanced fruit sorbetto recipe (no dairy) with lemon, water, a sucrose/dextrose sugar blend, and a little stabiliser. Total solids ~30-33%, sugars ~22-30%, sensible low lemon-juice inclusion (~20-35%), PAC in the sorbetto range, with the math shown.",
+      "files": [],
+      "assertions": [
+        {"text": "Produces a dairy-free fruit sorbetto recipe with gram quantities"},
+        {"text": "Total solids fall within ~30-33% of the mix"},
+        {"text": "Total sugars fall within ~22-30% of the mix"},
+        {"text": "Uses a sucrose + dextrose sugar blend (not 100% sucrose) for scoopability"},
+        {"text": "Lemon juice inclusion is sensibly low (high-acid fruit), roughly 20-35%"},
+        {"text": "Shows the balancing math including PAC/POD or freezing behaviour"},
+        {"text": "Adds lemon/acid handling and a serving temperature around -12 to -14 C"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My homemade gelato keeps coming out rock hard straight from the freezer and a bit icy. Here's roughly what I used: 600g whole milk, 150g cream, 160g sugar, no milk powder, no stabiliser. What's wrong and how do I fix the recipe?",
+      "expected_output": "A diagnosis (too hard = PAC too low / not enough anti-freeze sugars; icy = low solids and no stabiliser) and a corrected, balanced recipe — raise total solids (add SMP), add dextrose to raise PAC for scoopability, add a stabiliser, with the before/after math shown.",
+      "files": [],
+      "assertions": [
+        {"text": "Correctly diagnoses rock-hard as insufficient anti-freeze (low PAC / all-sucrose) and/or serving-temperature issue"},
+        {"text": "Correctly diagnoses iciness as low total solids and absence of a stabiliser"},
+        {"text": "Provides a corrected, balanced recipe with gram quantities"},
+        {"text": "The fix adds anti-freeze sugar (e.g. dextrose) and raises solids (e.g. skim milk powder) and adds a stabiliser or egg yolk"},
+        {"text": "Shows the corrected composition against the gelato targets"}
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I want to make coffee gelato with these exact ingredients (1 kg): 615 g whole fresh milk, 160 g whipping cream (~35-40% fat), 120 g caster sugar, 55 g dextrose, 22 g skimmed milk powder, 25 g instant coffee (good-quality freeze-dried), 3 g locust bean gum. Is this balanced, and how do I make it?",
+      "expected_output": "Runs the user's exact recipe through the balancing math, treating instant coffee as 'other solids'. Honestly reports that it is close but MSNF is low (~8.4%, below 9-12%) and total solids sit at/just below the 36% floor, with sweetness a touch low. Offers a minimal fix (e.g. a little more skimmed milk powder, slightly less milk) re-verified to balance, plus a method (dissolve coffee, age, churn, serve -12 to -14 C).",
+      "files": [],
+      "assertions": [
+        {"text": "Starts from the user's EXACT ingredient quantities rather than silently substituting or rescaling them"},
+        {"text": "Treats instant coffee as 'other solids' (not as fat, MSNF, or sugar)"},
+        {"text": "Runs the numbers and correctly identifies that MSNF is low (~8-8.5%, below the 9-12% target) and total solids are right at/just below the 36% floor"},
+        {"text": "Shows the composition breakdown / balancing math against the gelato targets"},
+        {"text": "Is honest about the marginal metrics rather than rubber-stamping the recipe as perfectly balanced"},
+        {"text": "If it proposes an adjustment, it is minimal (e.g. a little more skim milk powder) and the adjusted recipe is re-verified to balance"},
+        {"text": "Includes a method covering dissolving the coffee, ageing/churning, and serving around -12 to -14 C"}
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Can you give me a strawberry sorbetto recipe for my ice cream machine?",
+      "expected_output": "A balanced dairy-free strawberry sorbetto (~1 kg) with a sensible strawberry inclusion (~40-55% pulp, medium-acid fruit), a sucrose/dextrose sugar blend, a little stabiliser, total solids ~30-33%, sugars ~22-30%, PAC in the sorbetto range, with the math shown and serving guidance.",
+      "files": [],
+      "assertions": [
+        {"text": "Produces a dairy-free strawberry sorbetto recipe with gram quantities"},
+        {"text": "Total solids fall within ~30-33% of the mix"},
+        {"text": "Total sugars fall within ~22-30% of the mix"},
+        {"text": "Uses a sucrose + dextrose (or glucose) sugar blend, not 100% sucrose"},
+        {"text": "Strawberry inclusion is sensible for a medium-acid fruit (~40-55% pulp)"},
+        {"text": "Shows the balancing math including PAC/POD"},
+        {"text": "Includes serving guidance around -12 to -14 C"}
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "I love coffee gelato but I'm watching my calories — can you give me a lighter, lower-calorie coffee gelato that's still creamy?",
+      "expected_output": "A reduced-calorie coffee gelato balanced with type: light — fat cut (skim milk replaces most cream), part of the sugar replaced with maltitol/inulin, MSNF and stabiliser raised for body. Shows the calculator's Energy kcal/100g figure and a comparison to a standard coffee gelato (~180 kcal/100g) so the saving is concrete, while still balancing (PAC 250-290, scoopable).",
+      "files": [],
+      "assertions": [
+        {"text": "Produces a coffee gelato balanced as type: light (not the standard gelato bands)"},
+        {"text": "Cuts fat materially (e.g. skim milk replacing most cream) as the main calorie lever"},
+        {"text": "Replaces some sugar with a reduced-calorie sweetener (maltitol/erythritol) and/or inulin, rather than just less sugar"},
+        {"text": "Reports an Energy kcal/100g figure from the calculator and is meaningfully lower than a standard gelato (~170-200)"},
+        {"text": "Still balances: PAC in 250-290 (scoopable) and the recipe reports BALANCED"},
+        {"text": "Preserves creaminess via raised MSNF and/or stabiliser, and is honest that the saving is ~25-30%, not half"},
+        {"text": "Notes the polyol laxative caveat or keeps polyols moderate"}
+      ]
+    }
+  ]
+}
