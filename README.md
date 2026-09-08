@@ -44,6 +44,18 @@ Balance authentic Italian gelato, fruit sorbetto, and dairy-free (vegan) frozen 
 - Machine-aware (batch freezer, **Ninja Creami**, Cuisinart, no-machine) with a defect troubleshooting guide and worked reference recipes
 - Research-backed references reconciled from named sources (Corvitto, Caviezel, Carpigiani, icecreamscience), honest about where the science genuinely disagrees
 
+### human-prose
+
+Write, edit, or personalise long-form prose so it reads as written by a person: articles, blog posts, Notion pages, wiki docs, READMEs. Three modes: **draft** new prose toward a decided ending, **edit** existing text without changing what it says, and **voice** (build a reusable voice profile from your own writing samples, saved to `~/.claude/human-prose/voice.md`).
+
+**Triggers on:** "write a blog post / Notion page / wiki article about X", "make this sound less like AI", "humanise this", "edit this so it reads better", "build a voice profile from my writing"
+
+**Features:**
+- Rules target shape, not just vocabulary: concrete over abstract, varied sentence and paragraph length, no seesaw clauses, open and close on substance, trust the reader
+- Bundled stdlib-Python linter flags banned words and phrases, negative parallelism, em dashes, exclamation marks, `**Term**: explanation` lists, Title Case headings, uniform rhythm, missing contractions, scene-setting openers and summarising closers
+- Notion-specific block guidance (callouts, toggles, tables, TOC) loaded only when the target is Notion
+- Banned list treated as defaults to override deliberately, with sources cited
+
 ## MCP Servers
 
 ### protonmail
