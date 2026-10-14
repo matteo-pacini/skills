@@ -56,6 +56,20 @@ Write, edit, or personalise long-form prose so it reads as written by a person: 
 - Notion-specific block guidance (callouts, toggles, tables, TOC) loaded only when the target is Notion
 - Banned list treated as defaults to override deliberately, with sources cited
 
+### dream
+
+Consolidate Claude Code's auto-memory by "dreaming" over past sessions. Reviews a project's recent session transcripts alongside its memory folder, finds repeated mistakes, user corrections and stale or contradicted memories, and proposes evidence-backed edits. Nothing is written until you approve items by number.
+
+**Triggers on:** "/dream", "consolidate / clean up my memory", "learn from past sessions", "you keep making the same mistakes", "MEMORY.md is too long"
+
+**Features:**
+- Read-only stdlib-Python helper (`dream.sh`, same python3-or-nix-shell runner) that lists sessions, condenses transcripts and audits the memory folder
+- Digests shrink multi-MB transcripts ~50–200× while always keeping user messages, errors, refusals and failures hidden in successful output
+- Flags tool output that addresses the assistant (likely prompt injection) instead of acting on it
+- Memory audit: index size vs the 200-line / 25 KB load limit, dangling links, orphan files, broken `[[links]]`, missing frontmatter
+- Fans out sub-agents per batch of sessions; checks stale claims against the repo and git log
+- Proposal with session ids and "k of n sessions" counts per item; edits only what you approve
+
 ## MCP Servers
 
 ### protonmail
